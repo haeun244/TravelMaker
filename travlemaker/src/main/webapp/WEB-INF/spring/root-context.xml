@@ -38,11 +38,11 @@
 		</property>
 		<property name="typeAliases">
 			<list>
-				<value>com.dto.Member</value>
-				<value>com.dto.Travel</value>
-				<value>com.dto.Community</value>
-				<value>com.dto.Location</value>
-				<value>com.dto.Comments</value>
+				<value>com.acon.dto.Member</value>
+				<value>com.acon.dto.Travel</value>
+				<value>com.acon.dto.Community</value>
+				<value>com.acon.dto.Location</value>
+				<value>com.acon.dto.Comments</value>
 			</list>
 		</property>
 		<property name="dataSource" ref="dataSource" />
