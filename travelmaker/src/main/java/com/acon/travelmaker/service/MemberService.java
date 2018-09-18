@@ -16,4 +16,7 @@ public class MemberService {
 		return dao.login(member);
 	}
 
+	public int join(Member member) {
+		return dao.join(member);
+	}
 }

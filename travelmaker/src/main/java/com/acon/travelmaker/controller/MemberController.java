@@ -16,10 +16,26 @@ public class MemberController {
 	@Autowired
 	MemberService service;
 
+	@RequestMapping(value="/login" , method=RequestMethod.GET)
+	public String loginForm() {
+		return "member/login";
+	}
+	
+	@RequestMapping(value="/join" , method=RequestMethod.GET)
+	public String joinForm() {
+		return "member/join";
+	}
+	
 	@RequestMapping(value="/login" , method=RequestMethod.POST)
 	public String login(Member member , HttpSession session) {
 		member = service.login(member);
 		session.setAttribute("member", member);
 		return "home";
+	}
+	
+	@RequestMapping(value="/join" ,method=RequestMethod.POST)
+	public String join(Member member , HttpSession session) {
+		int n = service.join(member);
+		return "member/login";
 	}
 }

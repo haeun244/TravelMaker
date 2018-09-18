@@ -16,4 +16,8 @@ public class MemberDAO {
 		return template.selectOne("MemberMapper.login",member);
 	}
 
+	public int join(Member member) {
+		return template.insert("MemberMapper.join", member);
+	}
+
 }

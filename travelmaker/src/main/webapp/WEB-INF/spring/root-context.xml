@@ -10,7 +10,7 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
-		
+ 		
 	<context:property-placeholder location="classpath:config/jdbc.properties" />
 
 	<bean id="dataSource"
@@ -21,23 +21,25 @@
 		<property name="password" value="${jdbc.passwd}" />
 	</bean>
 
-	<!-- transaction 처리 -->
+	<!--transaction 처리 -->
 	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<property name="dataSource" ref="dataSource" />
 	</bean>
 	<tx:annotation-driven />
-	<!-- transaction 처리 -->
+	<!--transaction 처리 -->
 
 
 	<bean id="factoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="mapperLocations">
 			<list>
 				<value>classpath:config/MemberMapper.xml</value>
+				<value>classpath:config/CommunityMapper.xml</value>
 			</list>
 		</property>
 		<property name="typeAliases">
 			<list>
 				<value>com.acon.travelmaker.vo.Member</value>
+				<value>com.acon.travelmaker.vo.Community</value>
 			</list>
 		</property>
 		<property name="dataSource" ref="dataSource" />
@@ -45,5 +47,5 @@
 
 	<bean id="sessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
 		<constructor-arg name="sqlSessionFactory" ref="factoryBean" />
-	</bean>
+	</bean> 
 </beans>

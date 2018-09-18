@@ -5,11 +5,21 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="MemberMapper">
 
 	<select id="login" resultType="Member" parameterType="Member">
-		select id, name, email, phone
-		  from member
-		 where id = #{id} and passwd = #{passwd} 
+		SELECT id, name, email, phone
+		  FROM member
+		 WHERE id = #{id} and passwd = #{passwd} 
 	</select>
  
-	
-	
+ 	<insert id="join" parameterType="Member">
+ 		INSERT INTO member (id, 
+ 							passwd, 
+ 							name, 
+ 							email, 
+ 							phone)
+ 		VALUES (#{id}, 
+ 				#{passwd}, 
+ 				#{name}, 
+ 				#{email}, 
+ 				#{phone})								
+ 	</insert>
 </mapper>

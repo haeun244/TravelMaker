@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h1>travel maker </h1>
-	<a href="member/login.jsp">로그인</a>
-	<a href="member/join.jsp">회원가입</a>
+	<a href="login">로그인</a>
+	<a href="join">회원가입</a>
 </body>
 </html>
