@@ -7,7 +7,7 @@
 	<title>TRAVEL MAKER</title>
 </head>
 <body>
-	<h1>travel maker </h1>
+	<h1>travel maker ㅇㅇ </h1>
 	<a href="member/login.jsp">로그인</a>
 	<a href="member/join.jsp">회원가입</a>
 </body>
