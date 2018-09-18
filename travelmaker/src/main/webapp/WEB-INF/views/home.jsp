@@ -7,10 +7,8 @@
 	<title>TRAVEL MAKER</title>
 </head>
 <body>
-<h1>
-	Hello world!  
-</h1>
-
-<P>  The time on the server is ${serverTime}. </P>
+	<h1>travel maker </h1>
+	<a href="member/login.jsp">로그인</a>
+	<a href="member/join.jsp">회원가입</a>
 </body>
 </html>
